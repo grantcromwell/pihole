@@ -1,0 +1,28 @@
+menu "Relay"
+
+config UP_SSID
+    string "WiFi to relay"
+    default "Rutledge Flats Residents"
+
+config UP_PASSWORD
+    string "Password of the WiFi to relay"
+    default ""
+
+config AP_SSID
+    string "Name of the relay network"
+    default "ChangeNet"
+
+config AP_PASSWORD
+    string "Relay password (WPA2/WPA3)"
+    default "12345nodefu"
+
+config AP_MAX
+    int "Most devices on the relay at once"
+    default 8
+    range 1 10
+
+config LOG_LOOKUPS
+    bool "Print every DNS lookup to the serial log"
+    default n
+
+endmenu
